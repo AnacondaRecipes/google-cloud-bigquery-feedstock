@@ -53,8 +53,8 @@ outputs:
         - ipywidgets >=7.7.0
         - ipykernel >=6.0.0
         # geopandas extra
-        - geopandas >=0.9.0,<1.0dev
-        - shapely >=1.8.4,<3.0.0dev
+        - geopandas >=0.9.0,<1.0dev  # [not s390x]
+        - shapely >=1.8.4,<3.0.0dev  # [not s390x]
         # ipython extra
         - ipython >=7.23.1,!=8.1.0
         - ipykernel >=6.0.0
