@@ -45,13 +45,13 @@ outputs:
         # bqstorage extra
         - google-cloud-bigquery-storage >=2.6.0,<3.0.0dev
         # going with the more restrictive constraint here so we can stay noarch
-        - grpcio >=1.49.1,< 2.0dev
+        - grpcio >=1.49.1,<2.0dev
         # pandas extra
         - pandas >=1.1.0
         - db-dtypes >=0.3.0,<2.0.0dev
         # ipywidgets extra
-        - ipywidgets >=7.7.0
-        - ipykernel >=6.0.0
+        - ipywidgets >=7.7.0  # [not (s390x and py>311)]
+        # - ipykernel >=6.0.0
         # geopandas extra
         - geopandas >=0.9.0,<1.0dev  # [not s390x]
         - shapely >=1.8.4,<3.0.0dev  # [not s390x]
