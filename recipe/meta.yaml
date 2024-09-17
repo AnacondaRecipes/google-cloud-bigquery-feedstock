@@ -67,6 +67,11 @@ outputs:
     test:
       requires:
         - pip
+        - pytest
+        - freezegun
+      source_files:
+        - tests/unit
+        - tests/__init__.py
       imports:
         - google.api_core
         - google.cloud.bigquery
@@ -87,6 +92,10 @@ outputs:
         - google.cloud.bigquery_v2.types
       commands:
         - pip check
+        # ignore test_magics.py, test_table.py, and test_client.py
+        # because they use test_utils, unavailable
+        # https://github.com/googleapis/python-bigquery/issues/1758
+        - pytest -vv tests/unit --ignore=tests/unit/test_magics.py --ignore=tests/unit/test_table.py --ignore=tests/unit/test_client.py
 
   - name: {{ name }}-core
     build:
