@@ -46,7 +46,7 @@ outputs:
         - pyarrow >=3.0.0
         # bqstorage extra
         - google-cloud-bigquery-storage >=2.6.0,<3.0.0dev
-        # going with the more restrictive constraint here so we can stay noarch
+        # following conda-forge here, the constraint is more restrictive but valid for all py versions
         - grpcio >=1.49.1,<2.0dev
         # pandas extra
         - pandas >=1.1.0
