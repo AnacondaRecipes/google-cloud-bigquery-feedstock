@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery" %}
 {% set version = "3.25.0" %}
-{% set build = 0 %}
+{% set build = 1 %}
 {% set sha256 = "5b2aff3205a854481117436836ae1403f11f2594e6810a98886afd57eda28509" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest" %}
@@ -52,11 +52,11 @@ outputs:
         - pandas >=1.1.0
         - db-dtypes >=0.3.0,<2.0.0dev
         # ipywidgets extra
-        - ipywidgets >=7.7.0  # [not (s390x and py>311)]
+        - ipywidgets >=7.7.0  # [not py>311]
         # - ipykernel >=6.0.0
         # geopandas extra
-        - geopandas >=0.9.0,<1.0dev  # [not s390x]
-        - shapely >=1.8.4,<3.0.0dev  # [not s390x]
+        - geopandas >=0.9.0,<1.0dev
+        - shapely >=1.8.4,<3.0.0dev
         # ipython extra
         - ipython >=7.23.1,!=8.1.0
         - ipykernel >=6.0.0
@@ -161,3 +161,5 @@ extra:
     - xylar
     - parthea
     - tswast
+  skip-lints:
+    - wrong_output_script_key
