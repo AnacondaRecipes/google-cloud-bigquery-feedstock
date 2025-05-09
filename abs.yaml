@@ -1,6 +1,2 @@
 upload_channels:
   - sfe1ed40
-
-channels:
-  - https://staging.continuum.io/prefect/fs/google-cloud-bigquery-storage-feedstock/pr2/1676cf1
-  - https://staging.continuum.io/prefect/fs/db-dtypes-feedstock/pr3/e95d9b6
